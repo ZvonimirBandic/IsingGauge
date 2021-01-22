@@ -452,7 +452,7 @@ FileName=string("results/MonteCarlo Filename Temperature N=",N," sweeps=",runs,"
 CSV.write(FileName,  DataFrame(Temperature',:auto), writeheader=false)
 FileName=string("results/MonteCarlo Filename SpecificHeat N=",N," swees=",runs," ", TimeStamp,".csv")
 CSV.write(FileName,  DataFrame(SpecificHeat',:auto), writeheader=false)
-FileName=string("results/MonteCarlo Filename Wilson_loops_mean N=",Lmax," sweeps=",runs," ", TimeStamp,".csv")
+FileName=string("results/MonteCarlo Filename Wilson_loops_mean N=",N," sweeps=",runs," ", TimeStamp,".csv")
 CSV.write(FileName,  DataFrame(Wilson_loops_mean',:auto), writeheader=false)
 
 
