@@ -449,11 +449,11 @@ Temperature,SpecificHeat,MagnetizationSquared,EnergyMean,Susceptibility,Wilson_l
 # saving the data
 TimeStamp=string(Dates.today()," ", Dates.hour(now())," hr ", Dates.minute(now())," min ", Dates.second(now())," sec")
 FileName=string("results/MonteCarlo Filename Temperature N=",N," sweeps=",runs," ", TimeStamp,".csv")
-CSV.write(FileName,  DataFrame(Temperature',:auto), writeheader=false)
+CSV.write(FileName,  DataFrame(Temperature',:auto), header=false)
 FileName=string("results/MonteCarlo Filename SpecificHeat N=",N," swees=",runs," ", TimeStamp,".csv")
-CSV.write(FileName,  DataFrame(SpecificHeat',:auto), writeheader=false)
+CSV.write(FileName,  DataFrame(SpecificHeat',:auto), header=false)
 FileName=string("results/MonteCarlo Filename Wilson_loops_mean N=",N," sweeps=",runs," ", TimeStamp,".csv")
-CSV.write(FileName,  DataFrame(Wilson_loops_mean',:auto), writeheader=false)
+CSV.write(FileName,  DataFrame(Wilson_loops_mean',:auto), header=false)
 
 
 
