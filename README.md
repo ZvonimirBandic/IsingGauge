@@ -2,7 +2,8 @@
 Monte Carlo simulator of d-dimensional Ising Gauge hamiltonian
 
 This software is Monte Carlo simulator of Ising Gauge Hamiltonian in arbitrary d dimensions using periodic boundary conditions.
-This simulator is especially interesting for studying d=3 case.
+This simulator is especially interesting for studying d=3 case, where classical 3-dimensional Ising Gauge lattice
+acts as a topologicaly protected memory, offering storage of 2^3=8 topological (qu)bits (encoded in variable sector).
 
 
 Top module of the code is called IsingGaugeTop.jl. It includes following modules:
