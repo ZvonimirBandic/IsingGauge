@@ -1,6 +1,6 @@
 echo "batch run..."
 
-mkdir results # need to have results directory where IsingGaugeTop places CSV results files
+mkdir -p results # need to have results directory where IsingGaugeTop places CSV results files
 
 # this is an example run
 
