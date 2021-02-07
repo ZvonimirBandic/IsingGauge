@@ -11,6 +11,7 @@ function wilson(sigma,L,d,neighbor)
     for k=1:d # we will compute averages in k directions for Wilson loops
         # each direction will have computed L^(k-1) different loops    
         # compute j0 that belongs to the plane defined by i[k]=0
+		# j0 is computed as b*L^k+S, where b={0,1,2,...L^(d-k)-1} and s={1,2,....L^(k-1)}
         # then move in steps of j0, j0+L^(k-1), j0+2*L^(k-1) - i.e. neighbors in kth direction
         # I think using neighbor function would likely be faster
             
@@ -37,7 +38,8 @@ function wilson(sigma,L,d,neighbor)
         end
         W[k]=wilson_sum/(L^(d-1)) # compute average
     end
+	
     return W
-    # W contains array of averaged Wilson loops
+    # W contains array of averaged Wilson loops as W[k] for directions k=1,2,... d
     
 end
