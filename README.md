@@ -33,9 +33,14 @@ where m runs from 1:d. It provides site index value of neighbors to j in directi
 # setlattice.jl
 function setlattice(L,d,sector)
 
-This function generates initial desired state of the spin array in the lattice    
+This function acts as a "STORE" and can store 2^d (qu)bits in the array by setting sector[1:d] values to -1 or +1.
+This generates initial desired state of the spin array in the lattice    
 It allows one to pick a sector as an input vector sector=(sector_1, sector_2, ..., sector_k,....sector_d) (value +-1) for desired average topologically protected <W_k> Wilson loop = sector[k]. It returns sigma which is array of spins:
-sigma[j,m]  j=1:N; d=1:m provides spins on the bonds 1:d around site j
+sigma[j,m]  j=1:N; d=1:m provides spins on the bonds 1:d around site j.
+
+What we expect to see is that for d=2 Wilson loops averages tp stay preserved at T=0 temperature, and for d>2,
+we expect Wilson loops averages to stay preserved for temperatures smaller than the phase transition
+temperature. For d=3, the phase transition temperature is a continuous phase transition.
    
 
 # compute_energy.jl
