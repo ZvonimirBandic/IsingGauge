@@ -12,7 +12,8 @@ function neighbors(L,d)
     # this brings a lot of -1 and +1 into different array formulas
     
     # mapping of spins from j to (i1,i2,...id) is:
-    # j=(id-1)*L^(d-1)+...+(i_{k-1}-1)*L^(k-2)+...+(i1-1)+1
+    # j=(id)*L^(d-1)+...+(i_{k-1})*L^(k-2)+...+(i1)+1
+	# i_k's are running from 0 to L-1 as it is more convenient for mod function
     # and inverse is:
     # i1=(j-1)mod L
     # ik=round( ((j-1)mod L^k)/L^(k-1))
@@ -21,7 +22,7 @@ function neighbors(L,d)
     # pre-compute neighbors
     # not very optimal, but this computation is done only once
     
-    neighbor=zeros(Int32,N,2*d,2) # as there are 2 neighbors in each of the 2 directions
+    neighbor=zeros(Int32,N,2*d,2) # as there are 2 eighbors in each of the 2 directions
     i=zeros(Int32,d)
     ir=zeros(Int32,d,d) # ir[m,k] is k-th coordinate of the right neighbor in the m-th direction
     il=zeros(Int32,d,d) # il[m,k] is k-th coordinate of the left neighbor in the m-th direction

@@ -21,7 +21,8 @@ N=L^d - total number of spins in the array
 We are assuming d-dimensional lattice with length L in each direction. This function returns result array:  neighbor[j,m,1:2]; m runs from 1:d and it provides site index value of neighbors to j in direction "+1" and "-1";
 
     # mapping of spins from j to (i1,i2,...id) is:
-    # j=(id-1)*L^(d-1)+...+(i_{k-1}-1)*L^(k-2)+...+(i1-1)+1
+    # j=(id)*L^(d-1)+...+(i_{k-1})*L^(k-2)+...+(i1)+1
+	# notice that i_k's are running from 0 to L-1 so that mod functions are easy to calculate
     # and inverse is:
     # i1=(j-1)mod L
     # ik=round( ((j-1)mod L^k)/L^(k-1))
