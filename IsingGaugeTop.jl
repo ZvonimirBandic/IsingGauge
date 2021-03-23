@@ -10,8 +10,8 @@ include("measure.jl")
 
 
 
-sector=[1;-1;1]; #hardcoded
-N=parse(Int,ARGS[1]);   # pick Lmin
+sector=[1;1;1]; #hardcoded for now
+L=parse(Int,ARGS[1]);   # pick Lmin
 d=parse(Int,ARGS[2]);
 J=1 # hardcoded
 B=parse(Float64,ARGS[3]);
@@ -20,8 +20,9 @@ Tmax=parse(Float64,ARGS[5])
 Tstep=parse(Float64,ARGS[6])
 runs=parse(Int,ARGS[7]);
 
+N=L^d;
 
-Temperature,SpecificHeat,MagnetizationSquared,EnergyMean,Susceptibility,Wilson_loops_mean=measure(sector,N,d,J,B,Tmin,Tmax,Tstep,runs)
+Temperature,SpecificHeat,MagnetizationSquared,EnergyMean,Susceptibility,Wilson_loops_mean=measure(sector,L,d,J,B,Tmin,Tmax,Tstep,runs)
 
 
 # saving the data

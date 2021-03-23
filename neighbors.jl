@@ -63,5 +63,5 @@ function neighbors(L,d)
     
     return neighbor
         # returns result array:  neighbor[j,m,1:2]; m runs from 1:d
-        #                        provides site index value of neighbors to j in direction "+1" and "-1"
+        #                        provides site index value of neighbors to j in m-th direction , either in "+1" or "-1"
 end
