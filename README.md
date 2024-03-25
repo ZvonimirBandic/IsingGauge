@@ -9,7 +9,7 @@ acts as a topologicaly protected memory, offering storage of 2^3=8 topological (
 Top module of the code is called IsingGaugeTop.jl. It includes following modules:
 
 # modules.jl
-This modules lists all Julia libraries used in the code
+This modules lists all Julia libraries used in the code.
 
 
 # neighbors.jl
